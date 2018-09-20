@@ -3,10 +3,152 @@
 
 <head>
     <title>Fardhan Ardhi</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
-    First Blood
+    <div class="container-fluid">
+        <!-- <div class="row">
+            <ul id="menu">
+                <li data-menuanchor="firstPage" class="btn active"><a href="#firstPage">First slide</a></li>
+                <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+                <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+            </ul>
+        </div> -->
+        <div class="row">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="content">
+                <div id="fullpage">
+                    <div class="section" id="section0">
+                        <div class="intro">
+                            <h1>Section 1</h1>
+                            <p>
+                                Use the `navigationTooltips` option to use a text for each of the bullets in the
+                                navigation
+                                element.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section" id="section1">
+                        <div id="main">
+                            <h2>Sidenav Push Example</h2>
+                            <p>Click on the element below to open the side navigation menu, and push this content to
+                                the right.</p>
+                            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+                        </div>
+                    </div>
+                    <div class="section" id="section2">
+                        <h1>Section 3</h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
+    <script src="js/easings.min.js"></script>
+
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+
+    <script type="text/javascript" src="js/fullpage.js"></script>
+
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <script type="text/javascript">
+        var deleteLog = false;
+
+        //adding the params info into the page
+        function addToLog(callbackName, params) {
+            var callbackData = '<h4>' + callbackName + '</h4>';
+            Object.keys(params).forEach(function (key) {
+                var content = params[key];
+
+                if (content !== null && typeof content === 'object') {
+                    content = JSON.stringify(content);
+                }
+                callbackData += '<p><b>' + key + '</b>: ' + content + '</p>';
+            });
+            callbackData += '<br />';
+
+            // document.getElementById('callbacksDiv').innerHTML += callbackData;
+        }
+
+
+        var myFullpage = new fullpage('#fullpage', {
+            // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+            anchors: ['firstPage', 'secondPage', '3rdPage'],
+            navigation: true,
+            navigationTooltips: ['Page 1', 'Page 2', 'Any text!'],
+            showActiveTooltip: true,
+            menu: '#menu',
+
+            onLeave: function (origin, destination, direction) {
+                var params = {
+                    origin: origin,
+                    destination: destination,
+                    direction: direction
+                };
+
+                //clearing the logging in the screen
+                if (deleteLog) {
+                    document.getElementById('callbacksDiv').innerHTML = '';
+                }
+
+                addToLog('onLeave', params);
+
+                console.log("--- onLeave ---");
+                console.log(params);
+
+                if (params.destination.index == 1) {
+                    openNav();
+                }
+                else {
+                    closeNav();
+                }
+            }
+        });
+
+
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "30%";
+            document.getElementById("main").style.marginLeft = "30%";
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+
+    </script>
 </body>
 
 </html>
