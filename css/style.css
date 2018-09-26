@@ -86,9 +86,9 @@ acronym {
 /* Custom CSS
  * --------------------------------------- */
 body {
-  font-family: arial, helvetica;
+  /* font-family: arial, helvetica;
   color: #333;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5); */
 }
 
 h1 {
@@ -97,12 +97,6 @@ h1 {
 
 p {
   font-size: 2em;
-}
-
-.intro p {
-  width: 50%;
-  margin: 0 auto;
-  font-size: 1.5em;
 }
 
 #fp-nav ul li .fp-tooltip {
@@ -165,14 +159,14 @@ p {
 
 .sidenav {
   height: 100%;
-  width: 0;
+  width: 0%;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0.7s;
   padding-top: 60px;
 }
 
@@ -182,7 +176,7 @@ p {
   font-size: 25px;
   color: #818181;
   display: block;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .sidenav .closebtn {
@@ -193,12 +187,32 @@ p {
   margin-left: 50px;
 }
 
-#main {
+/* #main {
   transition: margin-left 0.5s;
   padding: 16px;
+} */
+
+#section0 {
+  background: url("../img/hero.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#section0 h1 {
+  font-family: "Roboto black", sans-serif;
+  color: #444
 }
 
 /* @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 } */
+
+.divider-head {
+  vertical-align: top;
+}
+
+
+#section1 {
+  background: url("../img/divider.png") no-repeat top;
+  /* background-size: auto; */
+}
