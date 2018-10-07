@@ -18,11 +18,20 @@ $(document).ready(function () {
     function () {
       console.log('hovering on', $(this).attr('id'));
 
-      if ($(this).attr('id') == 'about') {
-        $('#one').show();
-      }
-      else if ($(this).attr('id') == 'experience') {
+      // if ($(this).attr('id') == 'about') {
+      //   $('#one').show();
+      // }
+      if ($(this).attr('id') == 'experience') {
         $('#two').show();
+      }
+      else if ($(this).attr('id') == 'education') {
+        $('#three').show();
+      }
+      else if ($(this).attr('id') == 'skills') {
+        $('#four').show();
+      }
+      else if ($(this).attr('id') == 'interest') {
+        $('#five').show();
       }
     },
     function () {
