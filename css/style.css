@@ -67,13 +67,13 @@ section {
 #brand {
   /* padding: 10px; */
   font-family: 'Komoda', serif;
-  font-size: 350px;
+  font-size: 250px;
   background-color: transparent;
   color: #ffffff;
   border: 15px solid #ffffff;
   text-align: center;
   vertical-align:middle;
-  padding-top: 60px;
+  padding-top: 50px;
   padding-right: 80px;
   padding-left: 80px;
 
@@ -81,7 +81,7 @@ section {
 
 .tags {
   font-family: 'Lovelo Black', serif;
-  font-size: 70px;
+  font-size: 60px;
   color: rgb(255, 255, 255);
   line-height: 1.1;
 
