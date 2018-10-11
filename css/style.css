@@ -7,25 +7,45 @@ html {
   padding: 0;
   min-height:100%;
 }
+body {
+  position: relative;
+}
 
 /* div {
   cursor: pointer;
 } */
 
-section {
+.details {
   display: block;
   background: #ffffff;
   height: 100%;
   width: 100%;
   padding: 60px;
   box-sizing: border-box;
+
+  border: 10pt solid rgb(10, 10, 10);
+}
+
+#box-1 {
+  background: linear-gradient(to top right, rgb(10, 10, 10) calc(50% - 1px), rgb(0, 0, 0), rgb(0, 0, 0) calc(50% + 1px) )
+}
+
+#box-2 {
+  background: linear-gradient(to top left, rgb(10, 10, 10) calc(50% - 1px), rgb(0, 0, 0), rgb(0, 0, 0) calc(50% + 1px) )
+}
+
+#box-3 {
+  background: linear-gradient(to top left, rgb(0, 0, 0) calc(50% - 1px), rgb(0, 0, 0), rgb(10, 10, 10) calc(50% + 1px) )
+}
+
+#box-4 {
+  background: linear-gradient(to top right, rgb(0, 0, 0) calc(50% - 1px), rgb(0, 0, 0), rgb(10, 10, 10) calc(50% + 1px) )
 }
 
 #hover-layer {
   z-index: 0;
-  position: absolute;
-  /* pointer-events: none; */
-
+  position: fixed;
+  border: 10pt solid #ffffff;
 }
 
 #main {
@@ -34,59 +54,52 @@ section {
   width: 100%;
   padding: 0;
   z-index: 1;
-  position: absolute;
-  pointer-events: none;
+  position: fixed;
+  pointer-events: none ;
 }
 
 .details {
-  z-index: 2;
-  position: absolute;
+  z-index: 1;
+  position: relative;
   pointer-events: none;
 }
-
-#menu {
-  width: auto;
-}
-#menu * {
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 30px;
-  text-align: center;
-}
-#menu a {
-  display: none;
-  width: 0px;
-  opacity: 0;
-}
-#menu span {
-  display: inline-block;
-  width: 250px;
-}
-
 
 #brand {
   /* padding: 10px; */
   font-family: 'Komoda', serif;
   font-size: 250px;
-  background-color: transparent;
+  background-color: #000000;
   color: #ffffff;
-  border: 15px solid #ffffff;
+  border: 10pt solid #ffffff;
   text-align: center;
   vertical-align:middle;
-  padding-top: 50px;
-  padding-right: 80px;
-  padding-left: 80px;
+  padding-top: 30pt;
+  padding-right: 10pt;
+  padding-left: 10pt;
 
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  line-height: 0.75;
+}
+
+.select {
+  z-index: 3;
 }
 
 .tags {
   font-family: 'Lovelo Black', serif;
-  font-size: 60px;
+  font-size: 50px;
   color: rgb(255, 255, 255);
   line-height: 1.1;
 
-  /* box-shadow: 0 0 0 15px #000;
-  background-color: #000; */
+
+  box-shadow: 0 0 0 15px #000000;
+  background-color: #000000;
 }
 
 .quad {
