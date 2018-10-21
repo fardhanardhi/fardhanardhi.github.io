@@ -5,6 +5,7 @@ html {
   height: 100%;
   width: 100%;
   padding: 0;
+  min-height:100%;
 }
 
 div {
@@ -39,6 +40,7 @@ section {
   padding: 0;
   z-index: 1;
   position: absolute;
+  pointer-events: none;
 }
 
 #one {
@@ -89,6 +91,37 @@ section {
   width: 250px;
 }
 
+
+#brand {
+  /* padding: 10px; */
+  font-family: 'Komoda', serif;
+  font-size: 350px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 15px solid #ffffff;
+  /* margin: auto; */
+    text-align: center;
+    vertical-align:middle;
+    /* display:table-cell */
+    padding-top: 50px;
+    padding-right: 70px;
+    padding-left: 70px;
+
+}
+
+.tags {
+  font-family: 'Lovelo Line Light', serif;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
 @font-face {
   font-family: Axwell;
   src: url("../fonts/Axwell.otf") format("opentype");
@@ -108,24 +141,3 @@ section {
   font-family: 'Komoda';
   src: url("../fonts/Komoda.otf") format("opentype");
 }
-
-#brand {
-  /* padding: 10px; */
-  font-family: 'Komoda', serif;
-  font-size: 350px;
-  background-color: transparent;
-  color: #ffffff;
-  border: 15px solid #ffffff;
-  /* margin: auto; */
-    text-align: center;
-    vertical-align:middle;
-    /* display:table-cell */
-    padding-top: 50px;
-    padding-right: 70px;
-    padding-left: 70px;
-
-}
-/* body {
-  font-family: 'Axwell', serif;
-  font-size: 49px;
-} */
