@@ -11,6 +11,10 @@ body {
   position: relative;
 }
 
+p {
+  font-family: 'Roboto';
+}
+
 /* div {
   cursor: pointer;
 } */
@@ -128,20 +132,22 @@ body {
   text-align: center;
 }
 
-#one .container-fluid {
+.middle-div {
   position: relative;
   top: 50%;
-transform: translateY(-50%);
-
+  transform: translateY(-50%);
 }
 
-.content {
-  background-color: brown;
+.justify-right {
+  direction:rtl; 
+  text-align:justify;
+}
+
+/* .content {
   color: #ffffff;
   font-family: 'Roboto';
-  margin
   
-}
+} */
 
 .about-title {
   /* color: blue; */
