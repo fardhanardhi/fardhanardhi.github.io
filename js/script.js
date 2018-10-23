@@ -21,7 +21,6 @@ $(document).ready(function () {
 		},
 		function () {
 			hideAll();
-
 		}
 	);
 
@@ -44,8 +43,6 @@ $(document).ready(function () {
 		},
 		function () {
 			hideAll();
-
 		}
 	);
-
 });
