@@ -56,6 +56,9 @@ body {
   z-index: 1;
   position: relative;
   pointer-events: none;
+  background-color: #ffffff;
+  color: #C70025;
+  border: 10pt solid #ffffff;
 }
 
 .item .thn {
@@ -100,10 +103,11 @@ body {
   color: #ffffff;
 }
 
-.item h3 {
+.item h2 {
   font-family: 'Roboto';
-  font-weight: 700;
-  color: #C70025;
+  font-weight: 300;
+  /* color: #C70025; */
+  line-height: 0.7;
 }
 
 .item h5 {
@@ -190,7 +194,13 @@ body {
   text-align: center;
 }
 
-#two {
+/* #two {
+  background-color: #ffffff;
+  color: #C70025;
+  border: 10pt solid #ffffff;
+} */
+
+#three {
   background-color: #ffffff;
   color: #C70025;
   border: 10pt solid #ffffff;
@@ -216,10 +226,6 @@ body {
 
 .circle-shape {
   font-size: 5em;
-}
-
-.plus-shape {
-  font-size: 1em;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
