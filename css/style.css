@@ -58,7 +58,7 @@ body {
   pointer-events: none;
   background-color: #ffffff;
   color: #C70025;
-  border: 10pt solid #ffffff;
+  border: 10pt solid #C70025;
 }
 
 .item .thn {
@@ -203,7 +203,6 @@ body {
 #three {
   background-color: #ffffff;
   color: #C70025;
-  border: 10pt solid #ffffff;
 }
 
 .middle-div {
