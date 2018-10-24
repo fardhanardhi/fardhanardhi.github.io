@@ -11,16 +11,12 @@ body {
   position: relative;
 }
 
-p {
-  font-family: 'Roboto';
-}
-
 .details {
   display: block;
   background: #ffffff;
   height: 100%;
   width: 100%;
-  padding: 60px;
+  /* padding: auto; */
   box-sizing: border-box;
 }
 
@@ -60,6 +56,68 @@ p {
   z-index: 1;
   position: relative;
   pointer-events: none;
+}
+
+.item .thn {
+    font-family: 'Lovelo Black', serif;
+  font-size: 20px;
+  /* color: #ffffff; */
+  line-height: 0.5;
+  /* border: #000000 1px solid; */
+  /* box-shadow: 0 0 0 2px #000000; */
+  /* background-color: #000000; */
+  color: #000000;
+}
+
+.thn .first {
+  top: 0;
+}
+
+.thn .second {
+  top: 100%;
+}
+
+.thn {
+  text-align: right;
+}
+
+.thn hr {
+  border: #C70025 2px solid;
+}
+
+.item p {
+  /* font-family: 'Roboto'; */
+  font-family: 'Roboto';
+  padding-right: 10%;
+  margin-left: 15px;
+  padding-left: 15px;
+  /* margin-left: 20px; */
+  border-left: #000000 1px solid;
+}
+
+.item .badge {
+  background-color: #C70025;
+  color: #ffffff;
+}
+
+.item h3 {
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #C70025;
+}
+
+.item h5 {
+  font-weight: 500;
+  font-family: 'Roboto';
+  font-style: italic;
+  /* color: #C70025; */
+  /* border-bottom: #000000 1px solid; */
+  width: fit-content;
+}
+
+.item {
+  margin-bottom: 30px;
+  color: #000000;
 }
 
 #brand {
@@ -113,6 +171,15 @@ p {
   top: 50%;
 }
 
+.subpage-title {
+  font-family: 'Lovelo Black', serif;
+  font-size: 50px;
+  color: #ffffff;
+  line-height: 1.1;
+  box-shadow: 0 0 0 15px #C70025;
+  background-color: #C70025;
+}
+
 #one {
   background-color: #C70025;
   color: #ffffff;
@@ -121,6 +188,12 @@ p {
 
 #one .headline {
   text-align: center;
+}
+
+#two {
+  background-color: #ffffff;
+  color: #C70025;
+  border: 10pt solid #ffffff;
 }
 
 .middle-div {
@@ -143,6 +216,10 @@ p {
 
 .circle-shape {
   font-size: 5em;
+}
+
+.plus-shape {
+  font-size: 1em;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
