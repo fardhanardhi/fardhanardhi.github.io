@@ -156,8 +156,24 @@ body {
   font-size: 50px;
   color: #ffffff;
   line-height: 1.1;
-  box-shadow: 0 0 0 15px #000000;
+  /* box-shadow: 0 0 0 0.15em #000000;
+  background-color: #000000; */
+}
+
+.tags-text-up {
   background-color: #000000;
+  width: fit-content;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.tags-text-down {
+  background-color: #000000;
+  width: fit-content;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .quad {
@@ -180,7 +196,11 @@ body {
   font-size: 50px;
   color: #ffffff;
   line-height: 1.1;
-  box-shadow: 0 0 0 15px #C70025;
+  /* box-shadow: 0 0 0 15px #C70025; */
+  /* background-color: #C70025; */
+}
+
+.subpage-title .tags-text-up, .subpage-title .tags-text-down {
   background-color: #C70025;
 }
 
