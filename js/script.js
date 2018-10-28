@@ -1,4 +1,12 @@
 $(document).ready(function () {
+
+	// setInterval(function () {
+	// 	console.log('sdfsdkfjlsdk');
+		
+	// 	$("#box-1")
+	// 	.animate({ background: "linear-gradient(to top right, #000000 calc(50% - 1px), #000000, #C70025 calc(50% + 1px) )" }, 300)      .animate({ background: "linear-gradient(to top right, #C70025 calc(50% - 1px), #000000, #000000 calc(50% + 1px) )" }, 300);
+	// }, 1000);
+
 	hideAll();
 
 	function hideAll() {
@@ -45,4 +53,32 @@ $(document).ready(function () {
 			hideAll();
 		}
 	);
+
+
 });
+
+let ganti = true;
+
+window.setInterval(function () {
+
+	if (ganti) {
+		$("#box-1").css("background", "linear-gradient(to top right, #C70025 calc(50% - 1px), #000000, #000000 calc(50% + 1px) )");
+		$("#box-2").css("background", "linear-gradient(to top left, #C70025 calc(50% - 1px), #000000, #000000 calc(50% + 1px) )");
+		$("#box-3").css("background", "linear-gradient(to top left, #000000 calc(50% - 1px), #000000, #C70025 calc(50% + 1px) )");
+		$("#box-4").css("background", "linear-gradient(to top right, #000000 calc(50% - 1px), #000000, #C70025 calc(50% + 1px) )");
+		ganti = false;
+		console.log(ganti);
+
+	}
+	else {
+		$("#box-1").css("background", "linear-gradient(to top right, #000000 calc(50% - 1px), #000000, #C70025 calc(50% + 1px) )");
+		$("#box-2").css("background", "linear-gradient(to top left, #000000 calc(50% - 1px), #000000, #C70025 calc(50% + 1px) )");
+		$("#box-3").css("background", "linear-gradient(to top left, #C70025 calc(50% - 1px), #000000, #000000 calc(50% + 1px) )");
+		$("#box-4").css("background", "linear-gradient(to top right, #C70025 calc(50% - 1px), #000000, #000000 calc(50% + 1px) )");
+
+		ganti = true;
+		console.log(ganti);
+	}
+
+
+}, 1500);

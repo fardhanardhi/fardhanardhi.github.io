@@ -131,20 +131,21 @@ body {
   background-color: #000000;
   color: #ffffff;
   border: 10pt solid #ffffff;
-  text-align: center;
-  vertical-align:middle;
+
   padding-top: 30pt;
   padding-right: 10pt;
   padding-left: 10pt;
 
-  margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
+  /* right: 0px;
+  top: 0px; */
   transform: translate(-50%, -50%);
   z-index: 2;
   line-height: 0.75;
+  
+  -webkit-animation: heartbeat 1.5s infinite ;
 }
 
 .select {
@@ -272,4 +273,32 @@ body {
 @font-face {
   font-family: 'Komoda';
   src: url("../fonts/Komoda.otf") format("opentype");
+}
+
+@-webkit-keyframes heartbeat {
+    
+  0% {
+    transform: scale(1.3, 1.3) translate(-50%, -50%); 
+    transform-origin: top left;
+  }
+    92% {
+      transform: scale(1, 1) translate(-50%, -50%); 
+      transform-origin: top left;
+    }
+    94% {
+      transform: scale(1.15, 1.15) translate(-50%, -50%); 
+      transform-origin: top left;
+    }
+    96% {
+      transform: scale(1, 1) translate(-50%, -50%); 
+      transform-origin: top left;
+    }
+    98% {
+      transform: scale(1.1, 1.1) translate(-50%, -50%); 
+      transform-origin: top left;
+    }
+    100% {
+      transform: scale(1, 1) translate(-50%, -50%); 
+      transform-origin: top left;
+    }
 }
