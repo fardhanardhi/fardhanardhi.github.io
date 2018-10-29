@@ -66,6 +66,9 @@ window.setInterval(function () {
 		$("#box-2").css("background", "linear-gradient(to top left, #C70025 calc(50% - 1px), #000000, #000000 calc(50% + 1px) )");
 		$("#box-3").css("background", "linear-gradient(to top left, #000000 calc(50% - 1px), #000000, #C70025 calc(50% + 1px) )");
 		$("#box-4").css("background", "linear-gradient(to top right, #000000 calc(50% - 1px), #000000, #C70025 calc(50% + 1px) )");
+		$("#menu").css('color', '#C70025');
+		$("#foot").children("i").css({"color": "#C70025",});
+		$("#foot").children("i").removeClass('far fa-heart').addClass('fas fa-heart');
 		ganti = false;
 		console.log(ganti);
 
@@ -75,7 +78,9 @@ window.setInterval(function () {
 		$("#box-2").css("background", "linear-gradient(to top left, #000000 calc(50% - 1px), #000000, #C70025 calc(50% + 1px) )");
 		$("#box-3").css("background", "linear-gradient(to top left, #C70025 calc(50% - 1px), #000000, #000000 calc(50% + 1px) )");
 		$("#box-4").css("background", "linear-gradient(to top right, #C70025 calc(50% - 1px), #000000, #000000 calc(50% + 1px) )");
-
+		$("#menu").css('color', '#000000');
+		$("#foot").children("i").css({ "color": "#ffffff",});
+		$("#foot").children("i").removeClass('fas fa-heart').addClass('far fa-heart');
 		ganti = true;
 		console.log(ganti);
 	}
