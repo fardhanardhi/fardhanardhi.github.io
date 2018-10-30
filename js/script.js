@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 	// setInterval(function () {
 	// 	console.log('sdfsdkfjlsdk');
-		
+
 	// 	$("#box-1")
 	// 	.animate({ background: "linear-gradient(to top right, #000000 calc(50% - 1px), #000000, #C70025 calc(50% + 1px) )" }, 300)      .animate({ background: "linear-gradient(to top right, #C70025 calc(50% - 1px), #000000, #000000 calc(50% + 1px) )" }, 300);
 	// }, 1000);
