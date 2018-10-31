@@ -268,11 +268,13 @@ body {
   text-align: center;
 }
 
-/* #two {
-  background-color: #ffffff;
-  color: #C70025;
-  border: 10pt solid #ffffff;
-} */
+#two .img-container {
+  width: fit-content;
+}
+
+#two img {
+    float: right;
+}
 
 #three {
   background-color: #ffffff;
