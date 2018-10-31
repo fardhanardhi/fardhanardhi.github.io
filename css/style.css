@@ -89,9 +89,8 @@ body {
 }
 
 .item p {
-  /* font-family: 'Roboto'; */
   font-family: 'Roboto';
-  padding-right: 100px;
+  padding-right: 10px;
   margin-left: 15px;
   padding-left: 15px;
   /* margin-left: 20px; */
