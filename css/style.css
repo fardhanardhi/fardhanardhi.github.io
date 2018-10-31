@@ -94,7 +94,7 @@ body {
   margin-left: 15px;
   padding-left: 15px;
   /* margin-left: 20px; */
-  border-left: #000000 1px solid;
+  border-left: #C70025 5px dashed;
 }
 
 .item .badge {
@@ -113,9 +113,11 @@ body {
   font-weight: 500;
   font-family: 'Roboto';
   font-style: italic;
-  /* color: #C70025; */
+  color: #C70025;
   /* border-bottom: #000000 1px solid; */
   width: fit-content;
+  height: fit-content;
+  /* line-height: 5px; */
 }
 
 .item {
@@ -302,23 +304,8 @@ body {
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
 @font-face {
-  font-family: Axwell;
-  src: url("../fonts/Axwell.otf") format("opentype");
-}
-
-@font-face {
   font-family: 'Lovelo Black';
   src: url("../fonts/LoveloBlack.otf") format("opentype");
-}
-
-@font-face {
-  font-family: 'Lovelo Line Light';
-  src: url("../fonts/LoveloLineLight.otf") format("opentype");
-}
-
-@font-face {
-  font-family: 'Lovelo Line Bold';
-  src: url("../fonts/LoveloLineBold.otf") format("opentype");
 }
 
 @font-face {
