@@ -268,10 +268,6 @@ body {
   text-align: center;
 }
 
-#two .img-container {
-  width: fit-content;
-}
-
 #two img {
     float: right;
 }
@@ -280,6 +276,11 @@ body {
   background-color: #ffffff;
   color: #C70025;
 }
+
+#three img {
+    float: right;
+}
+
 
 .middle-div {
   position: relative;
