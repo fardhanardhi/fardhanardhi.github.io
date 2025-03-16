@@ -128,7 +128,7 @@
   <div class="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
     <!-- Profile Photo -->
     <div
-      class="mb-6 h-32 w-32 overflow-hidden rounded-full border-4 border-gray-200 transition-colors duration-700 md:h-40 md:w-40 dark:border-gray-700"
+      class="mb-6 h-32 w-32 overflow-hidden rounded-full border-4 border-gray-200 transition-colors duration-200 md:h-40 md:w-40 dark:border-gray-700"
     >
       <img
         src="https://gravatar.com/avatar/fbb1f6287e41d6458fa8f5d24b71ee56?size=256"
