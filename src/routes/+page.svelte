@@ -15,11 +15,10 @@
 
 	// Social media links
 	const socialLinks = [
-		{ name: 'GitHub', url: 'https://github.com/', icon: 'github' },
-		{ name: 'Twitter', url: 'https://twitter.com/', icon: 'twitter' },
-		{ name: 'Instagram', url: 'https://instagram.com/', icon: 'instagram' },
-		{ name: 'LinkedIn', url: 'https://linkedin.com/', icon: 'linkedin' },
-		{ name: 'Email', url: 'mailto:your.email@example.com', icon: 'mail' }
+		{ name: 'GitHub', url: 'https://github.com/fardhanardhi', icon: 'github' },
+		{ name: 'Instagram', url: 'https://instagram.com/fardhan.rd', icon: 'instagram' },
+		{ name: 'LinkedIn', url: 'https://linkedin.com/in/fardhanardhi', icon: 'linkedin' },
+		{ name: 'Email', url: 'mailto:far.dev.id@gmail.com', icon: 'mail' }
 	];
 
 	// Dark mode state
@@ -58,9 +57,27 @@
 		// Apply initial state
 		if (darkMode) {
 			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
 		}
 	});
 </script>
+
+<svelte:head>
+	<!-- Add this script to make Tailwind dark mode work -->
+	<script>
+		// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+		if (
+			localStorage.getItem('darkMode') === 'true' ||
+			(!localStorage.getItem('darkMode') &&
+				window.matchMedia('(prefers-color-scheme: dark)').matches)
+		) {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+	</script>
+</svelte:head>
 
 <main
 	class="flex min-h-screen flex-col items-center justify-center bg-white p-4 md:p-24 dark:bg-gray-900"
@@ -160,22 +177,6 @@
 								d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
 							></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg
 						>
-					{:else if link.icon === 'twitter'}
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="20"
-							height="20"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="lucide lucide-twitter"
-							><path
-								d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
-							></path></svg
-						>
 					{:else if link.icon === 'instagram'}
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -236,22 +237,6 @@
 		</footer>
 	</div>
 </main>
-
-<svelte:head>
-	<!-- Add this script to make Tailwind dark mode work -->
-	<script>
-		// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-		if (
-			localStorage.getItem('darkMode') === 'true' ||
-			(!localStorage.getItem('darkMode') &&
-				window.matchMedia('(prefers-color-scheme: dark)').matches)
-		) {
-			document.documentElement.classList.add('dark');
-		} else {
-			document.documentElement.classList.remove('dark');
-		}
-	</script>
-</svelte:head>
 
 <style>
 	/* This ensures the dark mode works with Tailwind */
