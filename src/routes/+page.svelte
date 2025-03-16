@@ -248,6 +248,7 @@
   /* This ensures the dark mode works with Tailwind */
   :global(html) {
     height: 100%;
+    background-color: var(--color-gray-900);
   }
 
   :global(body) {
