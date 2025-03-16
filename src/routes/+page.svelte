@@ -80,7 +80,7 @@
 </svelte:head>
 
 <main
-	class="flex min-h-screen flex-col items-center justify-center bg-white p-4 md:p-24 dark:bg-gray-900"
+	class="flex min-h-screen flex-col items-center justify-center bg-white p-4 transition-colors duration-200 md:p-24 dark:bg-gray-900"
 >
 	<!-- Dark Mode Toggle -->
 	<button
@@ -128,7 +128,7 @@
 	<div class="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
 		<!-- Profile Photo -->
 		<div
-			class="mb-6 h-32 w-32 overflow-hidden rounded-full border-4 border-gray-200 md:h-40 md:w-40 dark:border-gray-700"
+			class="mb-6 h-32 w-32 overflow-hidden rounded-full border-4 border-gray-200 transition-colors duration-700 md:h-40 md:w-40 dark:border-gray-700"
 		>
 			<img
 				src="https://gravatar.com/avatar/fbb1f6287e41d6458fa8f5d24b71ee56?size=256"
@@ -138,10 +138,16 @@
 		</div>
 
 		<!-- Name -->
-		<h1 class="mb-4 text-4xl font-bold text-gray-900 md:text-5xl dark:text-white">{name}</h1>
+		<h1
+			class="mb-4 text-4xl font-bold text-gray-900 transition-colors duration-700 md:text-5xl dark:text-white"
+		>
+			{name}
+		</h1>
 
 		<!-- Brief Bio - Optional -->
-		<p class="mb-8 max-w-md text-lg text-gray-600 dark:text-gray-400">
+		<p
+			class="mb-8 max-w-md text-lg text-gray-600 transition-colors duration-700 dark:text-gray-400"
+		>
 			{bio}
 		</p>
 
@@ -159,7 +165,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label={link.name}
-					class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-gray-300 bg-white text-gray-700 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+					class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-gray-300 bg-white text-gray-700 transition-colors duration-200 hover:bg-gray-100 hover:transition-none hover:duration-0 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
 				>
 					{#if link.icon === 'github'}
 						<svg
@@ -232,7 +238,7 @@
 		</div>
 
 		<!-- Footer -->
-		<footer class="text-sm text-gray-500 dark:text-gray-400">
+		<footer class="text-sm text-gray-500 transition-colors duration-700 dark:text-gray-400">
 			Made with ❤️ by {name.split(' ').at(0)}
 		</footer>
 	</div>
