@@ -22,7 +22,9 @@
   ];
 
   // Dark mode state
-  let darkMode = false;
+  let darkMode = $state(false);
+  let isLoad = $state(false);
+  let classActive = $derived(isLoad ? 'opacity-100' : 'opacity-0');
 
   // Toggle dark mode function
   function toggleDarkMode() {
@@ -85,7 +87,7 @@
   <!-- Dark Mode Toggle -->
   <button
     class="absolute top-4 right-4 rounded-full bg-gray-200 p-2 text-gray-800 transition-colors duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
-    on:click={toggleDarkMode}
+    onclick={toggleDarkMode}
     aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
   >
     {#if darkMode}
@@ -128,12 +130,15 @@
   <div class="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
     <!-- Profile Photo -->
     <div
-      class="mb-6 h-32 w-32 overflow-hidden rounded-full border-4 border-gray-200 transition-colors duration-200 md:h-40 md:w-40 dark:border-gray-700"
+      class="profilebg mb-6 h-32 w-32 overflow-hidden rounded-full border-4 border-gray-200 transition-colors duration-200 md:h-40 md:w-40 dark:border-gray-700"
     >
       <img
+        onload={() => {
+          isLoad = true;
+        }}
         src="https://gravatar.com/avatar/fbb1f6287e41d6458fa8f5d24b71ee56?size=256"
         alt="Profile"
-        class="h-full w-full object-cover"
+        class="h-full w-full object-cover {classActive} transition-opacity duration-500"
       />
     </div>
 
@@ -245,6 +250,10 @@
 </main>
 
 <style>
+  .profilebg {
+    background-color: #cfd5e2;
+  }
+
   /* This ensures the dark mode works with Tailwind */
   :global(html) {
     height: 100%;
